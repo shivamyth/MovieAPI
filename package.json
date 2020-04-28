@@ -1,0 +1,24 @@
+{
+  "name": "movie-metadata-service",
+  "version": "1.0.0",
+  "description": "Movie API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/babydestination/movie-metadata-service.git"
+  },
+  "author": "Shivam Mishra",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/babydestination/movie-metadata-service#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
