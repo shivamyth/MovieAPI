@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "8e8519a8-d1a8-4e43-ba64-3e499d54f013",
+		"name": "movie api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Movie Info from Json data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/movies/?title=Sin City",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Sin City"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetching from API and storing in json file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/movies/tt0848228",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"tt0848228"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
