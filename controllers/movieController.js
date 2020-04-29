@@ -5,7 +5,6 @@ const API_KEY = "68fd98ab";
 const directoryPath = path.join(__dirname, '../movies');
 
 
-
 module.exports.getOMDb = function(req,res){
     let MOVIE_ID = req.params.id;
     const id = MOVIE_ID.substring(2);
@@ -51,7 +50,7 @@ module.exports.getFromJson =  function(req,res){
                     var findData = JSON.parse(data);
                     var wantedKey = Object.getOwnPropertyNames(req.query)[0]; 
                     var wantedVal = req.query[wantedKey];
-                    if(findData.hasOwnProperty(wantedKey) && findData[wantedKey] === wantedVal) {
+                    if(findData.hasOwnProperty(wantedKey) && findData[wantedKey].toLowerCase() === wantedVal.toLowerCase()) {
                         return res.json(200,findData);
                     }
                 });
@@ -60,7 +59,7 @@ module.exports.getFromJson =  function(req,res){
         .catch(err=>{
             res.json(500,{
                 message:"Interval Server Error",
-                err:err
+                err
             });
         });
 }
